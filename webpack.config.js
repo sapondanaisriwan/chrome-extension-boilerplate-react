@@ -111,7 +111,7 @@ var options = {
       .concat(['.js', '.jsx', '.css']),
   },
   plugins: [
-    isDevelopment && new ReactRefreshWebpackPlugin(),
+    isDevelopment && new ReactRefreshWebpackPlugin({ overlay: false }),
     new CleanWebpackPlugin({ verbose: false }),
     new webpack.ProgressPlugin(),
     // expose and write the allowed env vars on the compiled bundle
